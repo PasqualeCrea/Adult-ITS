@@ -33,5 +33,33 @@
             <p>Submit your screen shot on <a class="emphasis" href="Example.html">Google Classroom</a>.</p>
         </section>
     </main>
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
 </body>
+<script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("img01");
+    const captionText = document.getElementById("caption");
+    const close = document.getElementById("close");
+    let imgs = document.getElementsByClassName('example');
+    document.addEventListener('click', (e) => {
+        if (e.target.className === "example") {
+            e.preventDefault();
+            modal.style.display = "block";
+            modalImg.src = e.target.src;
+            if (e.target.nextSibling.nextSibling == null) {
+                captionText.innerHTML = "";
+            } else {
+                captionText.innerHTML = e.target.nextSibling.nextSibling.innerHTML;
+            }
+        }
+        if (e.target.className === "close" || e.target.className === "modal") {
+            e.preventDefault();
+            modal.style.display = "none";
+        }
+    });
+</script>
 <html>
