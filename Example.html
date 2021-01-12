@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <title>Google Classroom Example | West-Mec Adult ITS</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.min.css">
+</head>
+
+<body>
+    <main class="instruction-set">
+        <section class="instruction">
+            <h2>Step 1: </h2>
+            <img class="example" src="images/google classroom1.png">
+            <p>Click on the assignment posted in your feed in the Google Classroom.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 2: </h2>
+            <img class="example" src="images/google classroom2.png">
+            <p>Click on the assignment file, "17.7.7..." in this case.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 3: </h2>
+            <img class="example" src="images/google classroom3.png">
+            <p>This will display a preview of the the document.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 4: </h2>
+            <img class="example" src="images/google classroom4.png">
+            <p>Click the 3 vertically stacked dots in the upper right hand corne, and select "Oppen in new window" from the dropdown.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 5: </h2>
+            <img class="example" src="images/google classroom5.png">
+            <p>Now click the download icon in the top right corner, the icon should appear as a down arrow pointing into a tray.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 6: </h2>
+            <img class="example" src="images/google classroom6.png">
+            <p>Save the file either to your flash drive or to your device's local storage.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 7: </h2>
+            <img class="example" src="images/google classroom7.png">
+            <p>Open up the document in the appropriate software (In this case Adobe Acrobat for a fillable PDF).</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 8: </h2>
+            <img class="example" src="images/google classroom8.png">
+            <p>Answer all the questions provided in the document. <span class="emphasis warn">YOU MUST</span> use a color other than black or white.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 9: </h2>
+            <img class="example" src="images/google classroom9.png">
+            <p>Once completed use the "Save As" feature to save your document and ensure to prepend or append your full name to the file. <span class="emphasis warn">YOU MUST</span> have your full name in the file name</p>
+        </section>
+        <section class="instruction">
+            <h2>Local vs G-Drive</h2>
+            <p><span class="emphasis warn">NOTE: </span>Steps 10-12 are each listed twice. This is because steps 10-12 are slightly different depending on if your file is saved in your Google Drive or to a local storage medium.</p>
+            <p>Steps 10-12 will be tagged with either "[Local]" or "[G-Drive]" to indicate which steps you should be following.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 10 [Local]: </h2>
+            <img class="example" src="images/google classroom10-local.png">
+            <p>Click the "Add or create" button on the assignment page and select "File" from the dropdown.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 11 [Local]: </h2>
+            <img class="example" src="images/google classroom11-local.png">
+            <p>On this new popup click the blue "BROWSE" button.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 12 [Local]: </h2>
+            <img class="example" src="images/google classroom12-local.png">
+            <p>Navigate to the directory containing your complted assignment, and select the assignment.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 10 [G-Drive]: </h2>
+            <img class="example" src="images/google classroom10-g-drive.png">
+            <p>Click the "Add or create" button on the assignment page and select "Google Drive" from the dropdown.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 11 [G-Drive]: </h2>
+            <img class="example" src="images/google classroom11-g-drive.png">
+            <p>If you completed your assignment using Google Docs, you should be able to select the assignment from your recent tab.</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 12 [G-Drive]: </h2>
+            <img class="example" src="images/google classroom12-g-drive.png">
+            <p>Once you have selected your completed assignment file, click "INSERT".</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 13: </h2>
+            <img class="example" src="images/google classroom13.png">
+            <p>You should now see your completed assignment document under the "Your work" section.<span class="emphasis warn">YOUR ASSIGNMENT IS NOT YET TURNED IN!</span></p>
+        </section>
+        <section class="instruction">
+            <h2>Step 14: </h2>
+            <img class="example" src="images/google classroom14.png">
+            <p>Click the blue "Turn in" button, you will be prompted to confirm, once again click "Turn in".</p>
+        </section>
+        <section class="instruction">
+            <h2>Step 15: </h2>
+            <img class="example" src="images/google classroom15.png">
+            <p>You can click on the document under the "Your work" section to verify the integrity and completeness of the file you have submitted. <span class="emphasis warn">THIS IS YOUR RESPONIBILITY!</span></p>
+        </section>
+    </main>
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+</body>
+<script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("img01");
+    const captionText = document.getElementById("caption");
+    const close = document.getElementById("close");
+    let imgs = document.getElementsByClassName('example');
+    document.addEventListener('click', (e) => {
+        if (e.target.className === "example") {
+            e.preventDefault();
+            modal.style.display = "block";
+            modalImg.src = e.target.src;
+            if (e.target.nextSibling.nextSibling == null) {
+                captionText.innerHTML = "";
+            } else {
+                captionText.innerHTML = e.target.nextSibling.nextSibling.innerHTML;
+            }
+        }
+        if (e.target.className === "close" || e.target.className === "modal") {
+            e.preventDefault();
+            modal.style.display = "none";
+        }
+    });
+</script>
+<html>
